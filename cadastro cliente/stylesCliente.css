@@ -1,0 +1,381 @@
+.main{
+    position: absolute;
+    width: 99%;
+    height: 982px;
+    top: 0px;
+
+    background: #EEE9E9;
+}
+
+.titulo-cliente{
+    /* Cadastro do cliente */
+
+    position: absolute;
+    width: 416px;
+    height: 55px;
+    left: 745px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.01em;
+
+    color: black;
+}
+
+.nome{
+    /* Nome Completo: */
+
+    position: absolute;
+    width: 113px;
+    height: 20px;
+    left: 447px;
+    top: 337px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+
+    color: #344054;
+}
+
+.caixa-nome{
+    box-sizing: border-box;
+
+    width: 392px;
+    height: 44px;
+    left: 444px;
+    top: 365px;
+
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+}
+
+.date{
+    /* Data de nascimento */
+
+    position: absolute;
+    width: 141px;
+    height: 20px;
+    left: 444px;
+    top: 439px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+
+    color: #344054;
+}
+
+.caixa-date{
+    box-sizing: border-box;
+
+    width: 392px;
+    height: 44px;
+    left: 444px;
+    top: 467px;
+
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+}
+
+.cep{
+    /* CEP */
+
+    position: absolute;
+    width: 141px;
+    height: 20px;
+    left: 444px;
+    top: 540px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+
+    color: #344054;
+}
+
+.caixa-cep{
+    box-sizing: border-box;
+
+    width: 392px;
+    height: 44px;
+    left: 444px;
+    top: 568px;
+
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+}
+
+.rua{
+    /* Rua */
+
+    position: absolute;
+    width: 47px;
+    height: 20px;
+    left: 441px;
+    top: 637px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+
+    color: #344054;
+}
+
+#txtrua{
+    box-sizing: border-box;
+
+    width: 392px;
+    height: 44px;
+    left: 441px;
+    top: 665px;
+
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+}
+
+.numero{
+    /* Número */
+
+    position: absolute;
+    width: 157px;
+    height: 20px;
+    left: 441px;
+    top: 739px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+
+    color: #344054;
+}
+
+#txtnumero{
+    box-sizing: border-box;
+
+    width: 392px;
+    height: 44px;
+    left: 441px;
+    top: 767px;
+
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+}
+
+.bairro{
+    /* Bairro */
+
+    position: absolute;
+    width: 141px;
+    height: 20px;
+    left: 438px;
+    top: 841px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+
+    color: #344054;
+}
+
+#txtbai{
+    box-sizing: border-box;
+
+    width: 392px;
+    height: 44px;
+    left: 438px;
+    top: 869px;
+
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+}
+
+.cidade{
+    /* Cidade */
+
+    position: absolute;
+    width: 141px;
+    height: 20px;
+    left: 1050px;
+    top: 337px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+
+    color: #344054;
+}
+
+#txtcity{
+    box-sizing: border-box;
+
+    width: 392px;
+    height: 44px;
+    left: 438px;
+    top: 971px;
+
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+}
+
+.estado{
+    /* Esatdo */
+
+    position: absolute;
+    width: 51px;
+    height: 20px;
+    left: 1050px;
+    top: 439px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+
+    color: #344054;
+}
+
+#txtestado{
+    box-sizing: border-box;
+
+    width: 392px;
+    height: 44px;
+    left: 679px;
+    top: 478px;
+
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+}
+
+.confimar-email{
+    /* E-mail */
+
+    position: absolute;
+    width: 47px;
+    height: 20px;
+    left: 1050px;
+    top: 540px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+
+    color: #344054;
+}
+
+.caixa-email{
+    box-sizing: border-box;
+
+    width: 392px;
+    height: 44px;
+    left: 680px;
+    top: 579px;
+
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+}
+
+.confirmar-senha{
+    /* senha */
+
+    position: absolute;
+    width: 46px;
+    height: 20px;
+    left: 1050px;
+    top: 637px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+
+    color: #344054;
+}
+
+#password{
+    box-sizing: border-box;
+
+    width: 392px;
+    height: 44px;
+    left: 671px;
+    top: 665px;
+
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+}
+
+.confirmar-senha2{
+    /* Confirmar senha */
+
+    position: absolute;
+    width: 115px;
+    height: 20px;
+    left: 1050px;
+    top: 739px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+
+    color: #344054;
+}
+
+#password2{
+    box-sizing: border-box;
+
+    width: 392px;
+    height: 44px;
+    left: 671px;
+    top: 778px;
+
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+}
+
+
+#submit {
+
+    position: absolute;
+    width: 392px;
+    height: 44px;
+    left: 1050px;
+    top: 861px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    border-color: #A152EF;
+    color: #fff;
+    background-image: -webkit-linear-gradient(45deg, #A152EF 50%, transparent 50%);
+    background-image: linear-gradient(45deg, #A152EF 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: 700ms ease-in-out;
+    transition: 700ms ease-in-out;
+}
+
+#submit:hover {
+    background-position: 0;
+}

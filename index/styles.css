@@ -1,0 +1,330 @@
+
+.main{
+    position: relative;
+    width: 1280px;
+    height: 861px;
+
+    background: #FCFDFF;
+}
+
+/* Lado direito da página */
+
+.introducao{
+    position: absolute;
+    width: 369px;
+    height: 571px;
+    left: 52px;
+    top: 116px;
+}
+
+.titulo-pag{
+    width: 140px;
+    height: 48px;
+
+    /* Headline */
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+
+    color: #344054;
+
+
+    /* layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.informacao-pag{
+    width: 365px;
+    height: 24px;
+
+    /* Text 1 */
+    /* Por favor, logue-se para ter acesso aos serviços. */
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: #667085;
+
+    /* layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.email{
+    width: 43px;
+    height: 20px;
+
+    /* email */
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+
+    /* Secondary Color */
+
+    color: #344054;
+
+    /* layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.caixa-email{
+    box-sizing: border-box;
+
+    width: 360px;
+    height: 44px;
+
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+
+    /* layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.password{
+    width: 42px;
+    height: 20px;
+
+    /* senha */
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+
+    /* Secondary Color */
+
+    color: #344054;
+
+    /* layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.caixa-password{
+    box-sizing: border-box;
+
+    width: 360px;
+    height: 44px;
+
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+
+    /* layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.caixa, .checkbox2{
+    display: contents;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 113px;
+}
+
+.caixa{
+    width: 355px;
+    height: 20px;
+    left: 52px;
+    top: 436px;
+    width: 73px;
+    height: 20px;
+
+    /* Text 2 */
+    /* Me lembrar */
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+
+    /* Secondary Color */
+
+    color: #344054;
+
+    /* layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+    width: 145px;
+    height: 20px;
+}
+
+.checkbox2{
+    /* Esqueceu a senha? */
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+
+    /* Primary Color */
+
+    color: #5429FF;
+
+    /* layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.entrar{
+    /* text 1 */
+    /* Entrar */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 154px;
+    gap: 10px;
+
+    position: absolute;
+    width: 369px;
+    height: 44px;
+    top: 488px;
+
+    background: #A152EF;
+    border-radius: 8px;
+}
+
+.google{
+    box-sizing: border-box;
+
+    /* layout */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 90px;
+    gap: 10px;
+
+    position: absolute;
+    width: 369px;
+    height: 44px;
+    top: 548px;
+
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+}
+
+.face{
+    /* text 1 */
+    /* Facebook */
+
+    box-sizing: border-box;
+
+    /* layout */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 90px;
+    gap: 10px;
+
+    position: absolute;
+    width: 369px;
+    height: 44px;
+    top: 602px;
+
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+}
+
+.sem-conta{
+/* Não tem conta? Faça login!*/
+
+    position: absolute;
+    width: 360px;
+    height: 21px;
+    top: 666px;
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+    text-align: center;
+
+    color: #000000;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+/* Lado esquerdo da página */
+
+.img{
+    position: absolute;
+    width: 110%;
+    height: 982px;
+    left: 482px;
+    top: 0px;
+
+    background: #BBAACC;
+}
+
+
+.img1{
+    position: absolute;
+    width: 700px;
+    height: 600px;
+    left: 400px;
+    top: 157px;
+    
+    background: url(/img/foto1.jpg);
+    border-radius: 30px;
+    
+    background-size: cover;
+}
+
+.descricao-img{
+    /* Descubra a sua beleza com a nossa plataforma de serviços e estética. */
+
+    position: absolute;
+    width: 445px;
+    height: px;
+    left: 536px;
+    top: 745px;
+
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 780;
+    font-size: 25px;
+    line-height: 32px;
+
+    color: #333333;
+}
