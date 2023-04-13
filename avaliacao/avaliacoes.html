@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Beauty</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css"
+    />
+    <script>
+      $(function () {
+        $("#rateYo").rateYo({
+          starWidth: "30px",
+          fullStar: true,
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Beauty</h1>
+    <hr />
+    <h2>Avaliação de serviço prestado</h2>
+    <form method="POST" action="enviar_avaliacao.php">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="avaliacao">Avaliação:</label>
+      <div id="rateYo"></div>
+
+      <label for="comentario">Comentário:</label>
+      <textarea id="comentario" name="comentario" rows="5"></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </body>
+</html>

@@ -1,45 +1,131 @@
 <!DOCTYPE html>
 <html lang="br">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Beauty</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-    <div id="main" class="main">
-    <div class="introducao">
-        <h1 class="titulo-pag">Beauty</h1>
-        <p class="informacao-pag">Por favor, logue-se para ter acesso aos serviços.</p>
-        <label for="email" class="email">E-mail:</label>
-        <input type="email" name="email" id="email" class="caixa-email">
-        <br>
-        <br>
-        <label for="password" class="password">Senha:</label>
-        <input type="password" name="password" id="password" class="caixa-password">
-        <br>
-        <br>
-            <div class="caixa">
-                <input type="checkbox" name="checkbox" id="checkbox" class="checkbox">
-                <label for="checkbox" class="checkbox">Me lembrar</label>
-                <a href="" class="checkbox2">Esqueceu a senha?</a>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      * {
+        margin: 0 !important;
+        padding: 0 !important;
+        box-sizing: border-box !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="d-flex" style="height: 100vh">
+      <div
+        class="d-flex align-items-center justify-content-center p-6"
+        style="width: 480px"
+      >
+        <div style="max-width: 400px">
+          <div class="d-flex flex-column justify-content-center gap-2 mb-5">
+            <h1 class="text fs-2 fw-bold h-4">Beauty</h1>
+            <p class="text-secondary">
+              Por favor, logue-se para ter acesso aos serviços.
+            </p>
+          </div>
+
+          <div class="d-flex flex-column justify-content-center gap-2">
+            <label for="email" class="text fs-6">E-mail:</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="w-100 rounded bg-light border border-1 border-secondary"
+              style="height: 2.75rem"
+            />
+          </div>
+
+          <div class="d-flex flex-column justify-content-center gap-2">
+            <label for="password" class="text fs-6">Senha:</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              class="w-100 mb-4 rounded bg-light border border-1 border-secondary"
+              style="height: 2.75rem"
+            />
+          </div>
+
+          <div class="d-flex align-items-center justify-content-between mb-4">
+            <div>
+              <label for="checkbox" class="checkbox">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="checkbox"
+                  class="checkbox"
+                />
+                <span>Lembre-se</span>
+              </label>
             </div>
-        <br>
-            <a href=""><input type="submit" name="submit" id="submit" value="Entrar" class="entrar"></a>
-        <br>
-            <a href=""><input type="submit" name="submit" id="submit" value="Entrar com Google" class="google"></a>
-        <br>
-            <a href=""><input type="submit" name="submit" id="submit" value="Entrar com Facebook" class="face"></a>
-        <br>
-        <p class="sem-conta">Não tem conta? <a href="/cards/perfil.html">Faça login!</a></p>
+            <a href="" class="checkbox2">Esqueceu a senha?</a>
+          </div>
+
+          <a>
+            <input
+              type="submit"
+              name="submit"
+              id="submit"
+              value="Entrar"
+              class="bg-light border border-1 border-secondary rounded w-100 d-flex align-items-center justify-content-center"
+              style="height: 44px"
+            />
+          </a>
+
+          <div class="my-3 d-flex flex-column gap-2">
+            <a>
+              <input
+                type="submit"
+                name="submit"
+                id="submit"
+                value="Entrar com o Google"
+                class="bg-light border border-1 border-secondary rounded w-100 d-flex align-items-center justify-content-center"
+                style="height: 44px"
+              />
+            </a>
+            <a>
+              <input
+                type="submit"
+                name="submit"
+                id="submit"
+                value="Entrar com o Facebook"
+                class="bg-light border border-1 border-secondary rounded w-100 d-flex align-items-center justify-content-center"
+                style="height: 44px"
+              />
+            </a>
+          </div>
+
+          <p class="text-center">
+            Não tem conta? <a href="/cards/perfil.html">Registre-se aqui</a>
+          </p>
+        </div>
+      </div>
+      <div
+        class="d-flex flex-column gap-4 align-items-center justify-content-center"
+        style="background-color: #bbaacc; flex-grow: 1"
+      >
+        <img
+          src="../img/foto1.jpg"
+          class="rounded"
+          style="height: 30rem; aspect-ratio: 1/1; object-fit: cover"
+        />
+        <h2 class="text fs-5 fw-bold">
+          Descubra sua beleza com a nossa<br />plataforma de serviços estéticos.
+        </h2>
+      </div>
     </div>
-    <div id="img" class="img">
-        <!--
-        <img src="img/lilas2.webp" alt="lilas2" height="200" width="800">
-        <img src="img/foto1.jpg" alt="foto1" width="700" height="700">
-        -->
-        <div class="img1"></div>
-        <p class="descricao-img">Descruba a sua beleza com a nossa plataforma de serviços e estética.</p>
-    </div>
-</div>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
