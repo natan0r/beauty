@@ -1,0 +1,131 @@
+body{
+	position: relative;
+    background: #EEE9E9;
+	max-width: inherit;
+}
+
+.titulo{
+	/* esqueceu a senha? */
+
+	position: absolute;
+	width: 397px;
+	height: 55px;
+	left: 441px;
+	top: 185px;
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 48px;
+	letter-spacing: 0.01em;
+	text-transform: uppercase;
+
+	color: #000000;
+}
+
+.paragrafo{
+	/* Sua nova senha deve ser diferente das senhas usadas anteriormente */
+
+	position: absolute;
+	width: 356px;
+	height: 48px;
+	left: 452px;
+	top: 247px;
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+
+	color: #667085;
+}
+
+.senha{
+	/* Senha: */
+
+	position: absolute;
+	width: 155px;
+	height: 20px;
+	left: 444px;
+	top: 327px;
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: 540;
+	font-size: 14px;
+	line-height: 20px;
+
+	color: #344054;
+}
+
+.form-control{
+	box-sizing: border-box;
+
+	position: absolute;
+	width: 392px;
+	height: 44px;
+	left: 444px;
+	top: 355px;
+
+	border: 1px solid #D0D5DD;
+	border-radius: 8px;
+}
+
+.confirmar-senha{
+	/* Confirmar da senha: */
+
+	position: absolute;
+	width: 155px;
+	height: 20px;
+	left: 444px;
+	top: 429px;
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+
+	color: #344054;
+}
+
+.form-control2{
+	box-sizing: border-box;
+
+	position: absolute;
+	width: 392px;
+	height: 44px;
+	left: 441px;
+	top: 467px;
+
+	border: 1px solid #D0D5DD;
+	border-radius: 8px;
+}
+
+.btn{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 12px 154px;
+	gap: 10px;
+
+	position: absolute;
+	width: 392px;
+	height: 44px;
+	left: 444px;
+	top: 544px;
+
+	background: #A152EF;
+	border-radius: 8px;
+}
+
+.btn2{
+	position: absolute;
+	width: 153.5px;
+	height: 24px;
+	left: 563px;
+	top: 631px;
+}
