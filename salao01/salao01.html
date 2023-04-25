@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty</title>
+    <link rel="stylesheet" href="salao01.css">
+    <link
+      rel="stylesheet"
+      href="//fonts.googleapis.com/css?family=font1|font2|etc"
+      type="text/css"
+    />
+    <script src="https://kit.fontawesome.com/2c7fc28a2f.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css"
+    />
+</head>
+    <style>
+        * {
+          margin: 0 !important;
+          box-sizing: border-box !important;
+        }
+      </style>
+<body>
+    <div class="main">
+        <div class="titulo">
+            <h1>BEAUTY</h1>
+        </div>
+        </div>
+            <br /><br /><br />
+            <div id="container">
+                <div id="galleryView">
+                    <div id="galleryContainer">
+                        <div id="leftView"></div>
+                            <button id="navLeft" class="navBtns">
+                                <i class="fas fa-arrow-left fa-3x"></i>
+                            </button>
+                                <a id="linkTag">
+                                <div id="mainView"></div>
+                                </a>
+                            <div id="rightView"></div>
+                            <button id="navRight" class="navBtns">
+                                <i class="fas fa-arrow-right fa-3x"></i>
+                            </button>
+                    </div>
+                </div>
+            <div id="tilesView">
+                <div id="tilesContainer"></div>
+            </div>
+        </div>
+        <div class="info">
+            <div class="info01">
+                <label for="avaliacao" class="avaliacao">Avaliação:</label>
+                <div id="rateYo"></div>
+                <p>Dono do estabelicimento: Robson Peluquero</p>
+                <p>Endereço: Av. Dr. Silas Munguba, 1300</p>
+                <p>especialidades: Corte e Quimica</p>
+            </div>
+            <div class="info02">
+                <h6>Entre em contato</h6>
+                <p>E-mail: contato@robsonpeluquero.com.br</p>
+                <p>Número: +55 (85) 30858095</p>
+                <p>Instagram: @robsonpeluquero</p>
+                <div class="txt-center">
+                    <a href=""><input type="submit" name="submit" id="submit" value="Reservar"></a>
+                </div>
+            </div>
+        </div>
+        <div class="avaliacoes">
+            <h3>Avaliações</h3>
+            <h6>Excelente! <p>236 avaliações</p></h6>
+        </div>
+        <div class="box">
+            <div class="box01">
+                <p>João</p><br>
+                <p>O servivo foi excelente! O profissional foi muito atencioso e prestativo.</p>
+            </div>
+            <div class="box02">
+                <p>Maria</p><br>
+                <p>Amei o espaço! Com certeza irei mais vezes.</p>
+            </div>
+            <div class="box03">
+                <p>Pedro</p><br>
+                <p>Atendimento ta de nota 10!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function toggleState3() {
+          let galleryView = document.getElementById("galleryView");
+          let tilesView = document.getElementById("tilesView");
+          let slider = document.getElementById("slider3");
+          let tilesContainer = document.getElementById("tilesContainer");
+          if (slider.classList.contains("active")) {
+            slider.classList.remove("active");
+            outer.classList.remove("outerActive");
+            galleryView.style.display = "flex";
+            tilesView.style.display = "none";
+  
+            while (tilesContainer.hasChildNodes()) {
+              tilesContainer.removeChild(tilesContainer.firstChild);
+            }
+          } else {
+            slider.classList.add("active");
+            outer.classList.add("outerActive");
+            galleryView.style.display = "none";
+            tilesView.style.display = "flex";
+  
+            for (let i = 0; i < imgObject.length - 1; i++) {
+              let tileItem = document.createElement("div");
+              tileItem.classList.add("tileItem");
+              tileItem.style.background = "url(" + imgObject[i] + ")";
+              tileItem.style.backgroundSize = "contain";
+              tilesContainer.appendChild(tileItem);
+            }
+          }
+        }
+  
+        let imgObject = [
+          "../img/fotoA.jpg",
+          "../img/fotoB.jpg",
+          "../img/fotoD.jpg",
+        ];
+  
+        let mainImg = 0;
+        let prevImg = imgObject.length - 1;
+        let nextImg = 1;
+  
+        function loadGallery() {
+          console.log("teste");
+          let mainView = document.getElementById("mainView");
+          mainView.style.background = "url(" + imgObject[mainImg] + ")";
+  
+          let leftView = document.getElementById("leftView");
+          leftView.style.background = "url(" + imgObject[prevImg] + ")";
+  
+          let rightView = document.getElementById("rightView");
+          rightView.style.background = "url(" + imgObject[nextImg] + ")";
+  
+          let linkTag = document.getElementById("linkTag");
+          linkTag.href = imgObject[mainImg];
+        }
+  
+        function scrollRight() {
+          prevImg = mainImg;
+          mainImg = nextImg;
+          if (nextImg >= imgObject.length - 1) {
+            nextImg = 0;
+          } else {
+            nextImg++;
+          }
+          loadGallery();
+        }
+  
+        function scrollLeft() {
+          nextImg = mainImg;
+          mainImg = prevImg;
+  
+          if (prevImg === 0) {
+            prevImg = imgObject.length - 1;
+          } else {
+            prevImg--;
+          }
+          loadGallery();
+        }
+  
+        navRight.addEventListener("click", scrollRight);
+        document.getElementById("navLeft").addEventListener("click", scrollLeft);
+        document
+          .getElementById("rightView")
+          .addEventListener("click", scrollRight);
+        document.getElementById("leftView").addEventListener("click", scrollLeft);
+        document.addEventListener("keyup", function (e) {
+          if (e.keyCode === 37) {
+            scrollLeft();
+          } else if (e.keyCode === 39) {
+            scrollRight();
+          }
+        });
+  
+        loadGallery();
+
+        $(function () {
+        $("#rateYo").rateYo({
+          starWidth: "30px",
+          fullStar: true,
+        });
+      });
+    </script>
+</body>
+</html>
