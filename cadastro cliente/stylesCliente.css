@@ -1,10 +1,14 @@
-.main{
+.body{
     position: absolute;
     width: 99%;
     height: 982px;
     top: 0px;
 
     background: #EEE9E9;
+}
+
+.main{
+    display: flex;
 }
 
 .titulo-cliente{
