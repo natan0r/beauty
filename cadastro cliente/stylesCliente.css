@@ -17,7 +17,8 @@
     position: absolute;
     width: 416px;
     height: 55px;
-    left: 745px;
+    left: 600px;
+    top: 75px;
 
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
@@ -31,10 +32,10 @@
     /* Nome Completo: */
 
     position: absolute;
-    width: 113px;
+    width: 167px;
     height: 20px;
-    left: 447px;
-    top: 337px;
+    left: 250px;
+    top: 230px;
 
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
@@ -63,8 +64,8 @@
     position: absolute;
     width: 141px;
     height: 20px;
-    left: 444px;
-    top: 439px;
+    left: 250px;
+    top: 332px;
 
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
@@ -93,8 +94,8 @@
     position: absolute;
     width: 141px;
     height: 20px;
-    left: 444px;
-    top: 540px;
+    left: 250px;
+    top: 434px;
 
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
@@ -123,8 +124,8 @@
     position: absolute;
     width: 47px;
     height: 20px;
-    left: 441px;
-    top: 637px;
+    left: 250px;
+    top: 536px;
 
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
@@ -135,7 +136,7 @@
     color: #344054;
 }
 
-#txtrua{
+.txtrua{
     box-sizing: border-box;
 
     width: 392px;
@@ -153,8 +154,8 @@
     position: absolute;
     width: 157px;
     height: 20px;
-    left: 441px;
-    top: 739px;
+    left: 250px;
+    top: 638px;
 
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
@@ -165,7 +166,7 @@
     color: #344054;
 }
 
-#txtnumero{
+.txtnumero{
     box-sizing: border-box;
 
     width: 392px;
@@ -183,8 +184,8 @@
     position: absolute;
     width: 141px;
     height: 20px;
-    left: 438px;
-    top: 841px;
+    left: 250px;
+    top: 740px;
 
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
@@ -195,7 +196,7 @@
     color: #344054;
 }
 
-#txtbai{
+.txtbai{
     box-sizing: border-box;
 
     width: 392px;
@@ -211,10 +212,10 @@
     /* Cidade */
 
     position: absolute;
-    width: 141px;
+    width: 167px;
     height: 20px;
-    left: 1050px;
-    top: 337px;
+    left: 920px;
+    top: 230px;
 
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
@@ -225,7 +226,7 @@
     color: #344054;
 }
 
-#txtcity{
+.txtcity{
     box-sizing: border-box;
 
     width: 392px;
@@ -241,10 +242,10 @@
     /* Esatdo */
 
     position: absolute;
-    width: 51px;
+    width: 141px;
     height: 20px;
-    left: 1050px;
-    top: 439px;
+    left: 920px;
+    top: 332px;
 
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
@@ -255,7 +256,7 @@
     color: #344054;
 }
 
-#txtestado{
+.txtestado{
     box-sizing: border-box;
 
     width: 392px;
@@ -271,10 +272,10 @@
     /* E-mail */
 
     position: absolute;
-    width: 47px;
+    width: 141px;
     height: 20px;
-    left: 1050px;
-    top: 540px;
+    left: 920px;
+    top: 434px;
 
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
@@ -301,10 +302,10 @@
     /* senha */
 
     position: absolute;
-    width: 46px;
+    width: 47px;
     height: 20px;
-    left: 1050px;
-    top: 637px;
+    left: 920px;
+    top: 536px;
 
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
@@ -315,7 +316,7 @@
     color: #344054;
 }
 
-#password{
+.password{
     box-sizing: border-box;
 
     width: 392px;
@@ -331,10 +332,10 @@
     /* Confirmar senha */
 
     position: absolute;
-    width: 115px;
+    width: 157px;
     height: 20px;
-    left: 1050px;
-    top: 739px;
+    left: 920px;
+    top: 638px;
 
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
@@ -345,7 +346,7 @@
     color: #344054;
 }
 
-#password2{
+.password2{
     box-sizing: border-box;
 
     width: 392px;
@@ -363,15 +364,15 @@
     position: absolute;
     width: 392px;
     height: 44px;
-    left: 1050px;
-    top: 861px;
+    left: 920px;
+    top: 760px !important;
 
     border-radius: 8px;
 
     cursor: pointer;
 
     border-color: #A152EF;
-    color: #fff;
+    color: #000;
     background-image: -webkit-linear-gradient(45deg, #A152EF 50%, transparent 50%);
     background-image: linear-gradient(45deg, #A152EF 50%, transparent 50%);
     background-position: 100%;

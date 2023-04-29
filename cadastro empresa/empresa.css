@@ -16,7 +16,7 @@
     position: absolute;
     width: 416px;
     height: 55px;
-    left: 500px;
+    left: 600px;
     top: 75px;
 
     font-family: Arial, Helvetica, sans-serif;
@@ -76,7 +76,6 @@
 }
 
 /*------------------------------------------------------------------------------------------------------------------*/
-/* CEP */
 
 .estado{
     /* estado */
@@ -96,7 +95,7 @@
     color: #344054;
 }
 
-#txtestado{
+.txtestado{
     box-sizing: border-box;
 
     width: 392px;
@@ -126,7 +125,7 @@
     color: #344054;
 }
 
-#txtrua{
+.txtrua{
     box-sizing: border-box;
 
     width: 392px;
@@ -156,7 +155,7 @@
     color: #344054;
 }
 
-#txtnumero{
+.txtnumero{
     box-sizing: border-box;
 
     width: 392px;
@@ -186,7 +185,7 @@
     color: #344054;
 }
 
-#txtbai{
+.txtbai{
     box-sizing: border-box;
 
     width: 392px;
@@ -216,7 +215,7 @@
     color: #344054;
 }
 
-#txtcity{
+.txtcity{
     box-sizing: border-box;
 
     width: 392px;
@@ -505,7 +504,7 @@
     position: absolute;
     width: 392px;
     height: 44px;
-    left: 920px;
+    left: 600px;
     top: 980px;
 
     border-radius: 8px;
