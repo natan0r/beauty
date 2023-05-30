@@ -1,37 +1,72 @@
 <!DOCTYPE html>
 <html lang="br">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Perfil</title>
-    <link rel="stylesheet" href="styles2.css">
-</head>
-<body>
-    <div class="main">
-        <h1 class="selecionar">Selecione o seu perfil:</h1>
-        <div class="cards">
-            <div id="empresa" class="card-perfil">
-                <img src="/img/Captura de tela 2023-04-03 095528.png" class="img-card1" alt="">
-                <div class="card-body1">
-                    <h3 class="subtitulo-card">NEGÓCIOS</h3>
-                    <h2 class="titulo-card">Empresas/Serviços</h2>
-                    <p class="descricao-card">Expanda sua base de clientes e aumente seus rendimentos. Registri-se agora e comece a oferecer
-                        seus serviços aos usuários da nossa plataforma.
-                    </p>
-                    <a href="/cadastro empresa/cadastroDaEmpresa.html" class="link-card">Cadastre-se</a>
-                </div>
-            </div>
-            <div class="card-perfil2">
-                <img src="/img/Captura de tela 2023-03-30 214101.png" class="img-card" alt="...">
-                <div class="card-body">
-                    <h3 class="subtitulo-card2">CONSUMIDOR</h3>
-                    <h2 class="titulo-card2">Cliente</h2>
-                    <p class="descricao-card2">Desfrute de serviços de beleza personalizados, com profissionais experientes. Registri-se 
-                        agora em nossa plataforma e comece a cuidar da sua beleza com praticidade e segurança.
-                    </p>
-                    <a href="/cadastro cliente/cadastroCliente.html" class="link-card2">Cadastre-se</a>
-                </div>
-            </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-[#EEE9E9]" style="font-family: Inter">
+    <div class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
+      <h1 class="text-4xl font-bold text-center mb-12">
+        Selecione o seu perfil:
+      </h1>
+      <div class="cards flex gap-32">
+        <div class="max-w-xs overflow-hidden">
+          <img
+            src="/img/Captura de tela 2023-04-03 095528.png"
+            class="rounded-t-2xl"
+            alt="..."
+          />
+          <div class="bg-white px-6 py-5 flex flex-col rounded-b-2xl">
+            <h3 class="text-xs text-[#6E798C] font-semibold uppercase mb-2.5">
+              NEGÓCIOS
+            </h3>
+            <h2 class="text-xl text-[#081F32] mb-6">EMPRESAS/SERVIÇOS</h2>
+            <p class="text-sm text-[#374A59] mb-1">
+              Expanda sua base de clientes e aumente seus rendimentos.
+              Registre-se agora e comece a oferecer seus serviços aos usuários
+              da nossa plataforma.
+            </p>
+            <a
+              href="/cadastro empresa/cadastroDaEmpresa.html"
+              class="text-[11px] text-[#007AE9] ml-auto"
+            >
+              Cadastre-se
+            </a>
+          </div>
         </div>
+
+        <div class="max-w-xs overflow-hidden rounded-2xl">
+          <img
+            src="/img/Captura de tela 2023-03-30 214101.png"
+            class="rounded-t-2xl"
+            alt="..."
+          />
+          <div class="bg-white px-6 py-5 flex flex-col rounded-b-2xl">
+            <h3 class="text-xs text-[#6E798C] font-semibold uppercase mb-2.5">
+              CONSUMIDOR
+            </h3>
+            <h2 class="text-xl text-[#081F32] mb-6">Cliente</h2>
+            <p class="text-sm text-[#374A59] mb-1">
+              Desfrute de serviços de beleza personalizados, com profissionais
+              experientes. Registri-se agora em nossa plataforma e comece a
+              cuidar da sua beleza com praticidade e segurança.
+            </p>
+            <a
+              href="/cadastro cliente/cadastroCliente.html"
+              class="text-[11px] text-[#007AE9] ml-auto"
+            >
+              Cadastre-se
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
