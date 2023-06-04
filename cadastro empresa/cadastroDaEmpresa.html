@@ -1,176 +1,213 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro da Empresa</title>
-    <link rel="stylesheet" href="empresa.css">
-    <link
+    <!-- <link rel="stylesheet" href="empresa.css" /> -->
+    <!-- <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
-    />
-</head>
-<body>
-    <div class="container">
-        <div class="titulo">
-            <h1 class="text fs-2 fw-bold h-4">Cadastro do Serviço</h1>
+    /> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#EEE9E9]">
+    <form class="max-w-[392px] mx-auto">
+      <h1 class="text-4xl text-center font-bold mb-[72px]">
+        Cadastro do cliente
+      </h1>
+      <div class="gap-6 mb-6 md:grid-cols-2">
+        <div>
+          <label
+            for="nome"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+            >Nome do Estabelecimento</label
+          >
+          <input
+            type="text"
+            id="nome"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-[30px]"
+            placeholder="Salão de beleza"
+            required
+          />
         </div>
-        <div class="part01">
-            <div class="nome">
-                <label for="nome">Nome do estabelecimento</label>
-                <input type="email" name="email" id="email" class="caixa-nome rounded bg-light border border-1 border-secondary">
-            </div>
-            <div class="cep">
-                <label for="txtcep">CEP</label>
-                <input type="text" name="cep" id="txtcep" class="caixa-cep rounded bg-light border border-1 border-secondary">
-            </div>
-            <div class="rua">
-                <label for="txtrua">Rua</label>
-                <input type="text" name="rua" class="txtrua rounded bg-light border border-1 border-secondary">
-            </div>
-            <div class="numero">
-                <label for="txtnumero">Número</label>
-                <input type="text" name="numero" class="txtnumero rounded bg-light border border-1 border-secondary">
-            </div>
-            <div class="bairro">
-                <label for="txtbai">Bairro</label>
-                <input type="text" name="bairro" class="txtbai rounded bg-light border border-1 border-secondary">
-            </div>
-            <div class="cidade">
-                <label for="txtcity">Cidade</label>
-                <input type="text" name="city" class="txtcity rounded bg-light border border-1 border-secondary">
-            </div>
-            <div class="estado">
-                <label for="txtestado">Estado</label>
-                <input type="text" name="estado" class="txtestado rounded bg-light border border-1 border-secondary">
-            </div>
+        <div>
+          <label
+            for="text"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+            >Endereço</label
+          >
+          <input
+            type="text"
+            id="endereco"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-[30px]"
+            placeholder="Rua 10"
+            required
+          />
         </div>
-        <div class="part02">
-            <div class="select">
-                <p class="text1">Horario do serviço</p>
-                    <div class="horas">
-                        <div class="hora1">
-                            <input type="checkbox" class="box00">
-                                <label for="box00">00:00</label>
-                            <input type="checkbox" class="box01">
-                                <label for="box01">01:00</label>
-                            <input type="checkbox" class="box02">
-                                <label for="box02">02:00</label>
-                            <input type="checkbox" class="box03">
-                                <label for="box03">03:00</label>
-                            <input type="checkbox" class="box04">
-                                <label for="box04">04:00</label>
-                            <input type="checkbox" class="box05">
-                                <label for="box00">05:00</label>
-                        </div>
-                        <div class="hora2">
-                            <input type="checkbox" class="box06">
-                                <label for="box06">06:00</label>
-                            <input type="checkbox" class="box07">
-                                <label for="box07">07:00</label>
-                            <input type="checkbox" class="box08">
-                                <label for="box08">08:00</label>
-                            <input type="checkbox" class="box09">
-                                <label for="box09">09:00</label>
-                            <input type="checkbox" class="box10">
-                                <label for="box10">10:00</label>
-                            <input type="checkbox" class="box11">
-                                <label for="box11">11:00</label>
-                        </div>
-                        <div class="hora3">
-                            <input type="checkbox" class="box12">
-                                <label for="box12">12:00</label>
-                            <input type="checkbox" class="box13">
-                                <label for="box13">13:00</label>
-                            <input type="checkbox" class="box14">
-                                <label for="box14">14:00</label>
-                            <input type="checkbox" class="box15">
-                                <label for="box15">15:00</label>
-                            <input type="checkbox" class="box16">
-                                <label for="box16">16:00</label>
-                            <input type="checkbox" class="box17">
-                                <label for="box17">17:00</label>
-                        </div>
-                        <div class="hora4">
-                            <input type="checkbox" class="box18">
-                                <label for="box18">18:00</label>
-                            <input type="checkbox" class="box19">
-                                <label for="box19">19:00</label>
-                            <input type="checkbox" class="box20">
-                                <label for="box20">20:00</label>
-                            <input type="checkbox" class="box21">
-                                <label for="box21">21:00</label>
-                            <input type="checkbox" class="box22">
-                                <label for="box22">22:00</label>
-                            <input type="checkbox" class="box23">
-                                <label for="box23">23:00</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="dias">
-                <p class="dias-semana">Dias da semana</p>
-                    <div class="semana1">
-                        <input type="checkbox" class="segunda">
-                            <label for="segunda">Segunda-feira</label>
-                        <input type="checkbox" class="terca">
-                            <label for="terca">Terça-feira</label>
-                        <input type="checkbox" class="quarta">
-                            <label for="quarta">Quarta-feira</label>
-                        <input type="checkbox" class="quinta">
-                            <label for="quinta">Quinta-feira</label>
-                    </div>
-                    <div class="semana2">
-                        <input type="checkbox" class="sexta">
-                            <label for="sexta">Sexta-feira</label>
-                        <input type="checkbox" class="sabado">
-                            <label for="sabado">Sabado</label>
-                        <input type="checkbox" class="domingo">
-                            <label for="domingo">Domingo</label>
-                    </div>
-            </div>
-            <div class="tipo-servico">
-                <p class="tipo-servico2">Tipos de serviços</p>
-                    <div class="botoes">
-                        <label class="btn btn-secondary active">
-                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Ativo
-                        </label>
-                        <label class="btn btn-secondary">
-                            <input type="radio" name="options" id="option2" autocomplete="off"> Radio
-                        </label>
-                    </div>
-            </div>
-            <div class="confimar-email">
-                <label for="email">E-mail</label>
-                <input type="email" name="email" id="email" class="caixa-email rounded bg-light border border-1 border-secondary">
-            </div>
-            <div class="celular">
-                <label for="celular">Número de telefone/celular</label>
-                <input type="tel" class="caixa-celular rounded bg-light border border-1 border-secondary">
-            </div>
-            <div class="especializacao">
-                <p class="txt-especializacao">Especialização</p>
-                    <div class="tipos-especializacao">
-                        <input type="checkbox" class="box-colometria">
-                            <label for="colometria">Colometria</label><br>
-                        <input type="checkbox" class="box-cortes">
-                            <label for="cortes">Cortes</label><br>
-                        <input type="checkbox" class="box-unha">
-                            <label for="unha">Unhas</label><br>
-                        <input type="checkbox" class="box-depilacao">
-                            <label for="depilacao">Depilação</label><br>
-                        <input type="checkbox" class="box-maqui">
-                            <label for="maqui">Maquiagem</label>
-                    </div>
-            </div>
-            <a href="/index/index.html"><input type="submit" name="submit" id="submit" value="Cadastrar"></a>
-        </div>
-    </div>
 
-    <!-- JavaScript -->
-    <script type="text/JavaScript" src="/js/CEP.js"></script>
-</body>
+        <label
+          for="periodo"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+          >Periodo de serviço</label
+        >
+        <select
+          id="periodo"
+          class="block w-full p-2 mb-6 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+        >
+          <option selected>Escola uma opção</option>
+          <option value="manha">Manhã</option>
+          <option value="tarde">Tarde</option>
+          <option value="noite">Noite</option>
+          <option value="manha-tarde">Manhã e tarde</option>
+        </select>
+        <label
+          for="horario"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+          >Horário de serviço</label
+        >
+        <select
+          id="horario"
+          class="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        >
+          <option selected>Selecione os horarios</option>
+          <option value="US">8h as 12h</option>
+          <option value="CA">8h as 14h</option>
+          <option value="FR">8h as 16h</option>
+          <option value="DE">8h as 18h</option>
+        </select>
+
+        <h3 class="mb-5 text-lg font-medium text-gray-900 dark:text-blaack">
+          Tipo de serviço
+        </h3>
+        <ul class="grid w-full gap-6 md:grid-cols-2">
+          <li>
+            <input
+              type="radio"
+              id="estabelecimento"
+              name="hosting"
+              value="hosting-small"
+              class="hidden peer"
+              required
+            />
+            <label
+              for="estabelecimento"
+              class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-white-800 dark:hover:bg-gray-700"
+            >
+              <div class="block">
+                <div class="w-full text-lg font-semibold dark:text-black">
+                  Estabelecimento
+                </div>
+              </div>
+            </label>
+          </li>
+          <li>
+            <input
+              type="radio"
+              id="autonomo"
+              name="hosting"
+              value="hosting-big"
+              class="hidden peer"
+            />
+            <label
+              for="autonomo"
+              class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-white-800 dark:hover:bg-gray-700"
+            >
+              <div class="block">
+                <div class="w-full text-lg font-semibold dark:text-black">
+                  Autônomo
+                </div>
+              </div>
+            </label>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <label
+          for="numero"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+          >Número para contato</label
+        >
+        <input
+          type="text"
+          id="numero"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-[30px]"
+          placeholder="(00) 00000-0000"
+          required
+        />
+      </div>
+      <div>
+        <label
+          for="email"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+          >Email</label
+        >
+        <input
+          type="email"
+          id="email"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-[30px]"
+          placeholder="john.doe@company.com"
+          required
+        />
+      </div>
+      <div>
+        <label
+          for="senha"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+          >Senha</label
+        >
+        <input
+          type="password"
+          id="senha"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-[30px]"
+          placeholder="•••••••••"
+          required
+        />
+      </div>
+      <div>
+        <label
+          for="confirmarSenha"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+          >Confirmar senha</label
+        >
+        <input
+          type="password"
+          id="confirmarSenha"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-[30px]"
+          placeholder="•••••••••"
+          required
+        />
+      </div>
+      <div class="flex items-start mb-6">
+        <div class="flex items-center h-5">
+          <input
+            id="remember"
+            type="checkbox"
+            value=""
+            class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300"
+            required
+          />
+        </div>
+        <label
+          for="remember"
+          class="ml-2 text-sm font-medium text-gray-900 dark:text-black-300"
+          >Eu confirmo com os termos de confições.</label
+        >
+      </div>
+      <button
+        type="button"
+        class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800"
+        onclick="enviarForms()"
+      >
+        <span
+          class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
+        >
+          Cadastrar
+        </span>
+      </button>
+    </form>
+  </body>
 </html>
