@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro da Empresa</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body class="bg-[#EEE9E9]">
     <form class="max-w-[392px] mx-auto">
       <h1 class="text-4xl text-center font-bold mb-[72px]">
-        Cadastro do cliente
+        Cadastro da Empresa
       </h1>
       <div class="gap-6 mb-6 md:grid-cols-2">
         <div>
@@ -192,15 +193,63 @@
       </div>
       <button
         type="button"
-        class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800"
+        class="w-full relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800"
         onclick="enviarForms()"
       >
         <span
-          class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
+          class="w-full relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
         >
           Cadastrar
         </span>
       </button>
     </form>
+    <script>
+      const nomeInput = document.querySelector("#nome");
+      const enderecoInput = document.querySelector("#endereco");
+      const periodoInput = document.querySelector("#periodo");
+      const horarioInput = document.querySelector("#horario");
+      const tipoServico01Input = document.querySelector("#estabelecimento");
+      const tipoServico02Input = document.querySelector("#autonomo");
+      const numeroInput = document.querySelector("#numero");
+      const emailInput = document.querySelector("#email");
+      const senhaInput = document.querySelector("#senha");
+      const confirmarSenhaInput = document.querySelector("#confirmarSenha");
+
+      function enviarForms() {
+        const nome = nomeInput.value;
+        const endereco = enderecoInput.value;
+        const periodo = periodoInput.value;
+        const horario = horarioInput.value;
+        const tipoServico01 = tipoServico01Input.value;
+        const tipoServico02 = tipoServico02Input.value;
+        const numero = numeroInput.value;
+        const email = emailInput.value;
+
+        const senha = senhaInput.value;
+        const confirmarSenha = confirmarSenhaInput.value;
+        if (senha !== confirmarSenha) {
+          return;
+        }
+
+        axios
+          .post("http://localhost:8081/empresa", {
+            nomeEmpresa: nome,
+            endereco: endereco,
+            periodo: periodo,
+            horario: horario,
+            tipoServico: tipoServico01 || tipoServico02,
+            numero: numero,
+            email: email,
+            senha: senha,
+          })
+          .then(function (res) {
+            console.log(res);
+            window.location.href = "/index/index.html";
+          })
+          .catch(function (err) {
+            console.log(err);
+          });
+      }
+    </script>
   </body>
 </html>
