@@ -4,68 +4,252 @@
     <meta charset="UTF-8" />
     <title>Cadastro do Cliente</title>
     <link rel="stylesheet" href="stylesCliente.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-      crossorigin="anonymous"
-    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
-  <body>
-    <div class="main">
-      <div class="titulo-cliente">
-        <h1 class="text fs-2 fw-bold h-4">Cadastro do cliente</h1>
+  <body class="bg-[#EEE9E9]">
+    <form class="max-w-[392px] mx-auto">
+      <h1 class="text-4xl text-center font-bold mb-[72px]">
+        Cadastro do cliente
+      </h1>
+      <div class="gap-6 mb-6 md:grid-cols-2">
+        <div>
+          <label
+            for="nome"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+            >Nome completo</label
+          >
+          <input
+            type="text"
+            id="nome"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-[30px]"
+            placeholder="John"
+            required
+          />
+        </div>
+        <div>
+          <label
+            for="date"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+            >Data de nascimento</label
+          >
+          <input
+            type="date"
+            id="date"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-[30px]"
+            placeholder="Digite sua data de nascimento"
+            required
+          />
+        </div>
+        <div>
+          <label
+            for="txtcep"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+            >CEP</label
+          >
+          <input
+            type="text"
+            id="txtcep"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-[30px]"
+            placeholder="Flowbite"
+            required
+          />
+        </div>
+        <div>
+          <label
+            for="rua"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+            >Rua</label
+          >
+          <input
+            type="text"
+            id="rua"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-[30px]"
+            placeholder="Flowbite"
+            required
+          />
+        </div>
+        <div>
+          <label
+            for="bairro"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+            >Bairro</label
+          >
+          <input
+            type="text"
+            id="bairro"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-[30px]"
+            placeholder="Flowbite"
+            required
+          />
+        </div>
+        <div>
+          <label
+            for="numero"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+            >Número</label
+          >
+          <input
+            type="text"
+            id="numero"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-[30px]"
+            placeholder="Flowbite"
+            required
+          />
+        </div>
+        <div>
+          <label
+            for="city"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+            >Cidade</label
+          >
+          <input
+            type="text"
+            id="city"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-[30px]"
+            placeholder="Flowbite"
+            required
+          />
+        </div>
+        <div>
+          <label
+            for="estado"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+            >Estado</label
+          >
+          <input
+            type="text"
+            id="estado"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-[30px]"
+            placeholder="Flowbite"
+            required
+          />
+        </div>
       </div>
-      <div class="nome">
-        <label for="nome">Nome completo:</label>
-        <input type="email" name="email" id="email" class="caixa-nome rounded bg-light border border-1 border-secondary" />
+      <div class="mb-6">
+        <label
+          for="email2"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+          >Email</label
+        >
+        <input
+          type="email"
+          id="email2"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-[30px]"
+          placeholder="john.doe@company.com"
+          required
+        />
       </div>
-      <div class="date">
-        <label for="date">Data de nascimento:</label>
-        <input type="date" name="date" id="date" class="caixa-date rounded bg-light border border-1 border-secondary" />
+      <div class="mb-6">
+        <label
+          for="senha"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+          >Senha</label
+        >
+        <input
+          type="password"
+          id="senha"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-[30px]"
+          placeholder="•••••••••"
+          required
+        />
       </div>
-      <div class="cep">
-        <label for="txtcep">CEP</label>
-        <input type="text" name="cep" id="txtcep" class="caixa-cep rounded bg-light border border-1 border-secondary" />
+      <div class="mb-6">
+        <label
+          for="confirmarSenha"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+          >Confirmar senha</label
+        >
+        <input
+          type="password"
+          id="confirmarSenha"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-[30px]"
+          placeholder="•••••••••"
+          required
+        />
       </div>
-      <div class="rua">
-        <label for="txtrua">Rua</label>
-        <input type="text" name="rua" class="txtrua rounded bg-light border border-1 border-secondary" />
+      <div class="flex items-start mb-6">
+        <div class="flex items-center h-5">
+          <input
+            id="remember"
+            type="checkbox"
+            value=""
+            class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300"
+            required
+          />
+        </div>
+        <label
+          for="remember"
+          class="ml-2 text-sm font-medium text-gray-900 dark:text-black-300"
+          >Eu confirmo com os termos de confições.</label
+        >
       </div>
-      <div class="numero">
-        <label for="txtnumero">Número</label>
-        <input type="text" name="numero" class="txtnumero rounded bg-light border border-1 border-secondary" />
-      </div>
-      <div class="bairro">
-        <label for="txtbai">Bairro</label>
-        <input type="text" name="bairro" class="txtbai rounded bg-light border border-1 border-secondary" />
-      </div>
-      <div class="cidade">
-        <label for="txtcity">Cidade</label>
-        <input type="text" name="city" class="txtcity rounded bg-light border border-1 border-secondary" />
-      </div>
-      <div class="estado">
-        <label for="txtestado">Estado</label>
-        <input type="text" name="estado" class="txtestado rounded bg-light border border-1 border-secondary" />
-      </div>
-      <div class="confimar-email">
-        <label for="email">E-mail</label>
-        <input type="email" name="email" id="email" class="caixa-email rounded bg-light border border-1 border-secondary" />
-      </div>
-      <div class="confirmar-senha">
-        <label for="password">Senha</label>
-        <input type="password" name="password"  class="password rounded bg-light border border-1 border-secondary" />
-      </div>
-      <div class="confirmar-senha2">
-        <label for="password">Confirmar senha</label>
-        <input type="password" name="password" class="password2 rounded bg-light border border-1 border-secondary" />
-      </div>
-      <a href="/index/index.html"
-        ><input type="submit" name="submit" id="submit" value="Cadastrar"
-      /></a>
-    </div>
+      <button
+        type="button"
+        class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800"
+        onclick="enviarForms()"
+      >
+        <span
+          class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
+        >
+          Cadastrar
+        </span>
+      </button>
+    </form>
 
     <!-- JavaScript -->
-    <script type="text/JavaScript" src="/js/CEP.js"></script>
+
+    <script>
+      const nomeInput = document.querySelector("#nome");
+      const dataNascimentoInput = document.querySelector("#date");
+      const CEPInput = document.querySelector("#txtcep");
+      const ruaInput = document.querySelector("#rua");
+      const numeroInput = document.querySelector("#numero");
+      const bairroInput = document.querySelector("#bairro");
+      const cidadeInput = document.querySelector("#city");
+      const estadoInput = document.querySelector("#estado");
+      const emailInput = document.querySelector("#email2");
+      const senhaInput = document.querySelector("#senha");
+      const confirmarSenhaInput = document.querySelector("#confirmarSenha");
+
+      function enviarForms() {
+        const nome = nomeInput.value;
+        const data = dataNascimentoInput.value;
+        const cep = CEPInput.value;
+        const rua = ruaInput.value;
+        const numero = numeroInput.value;
+        const bairro = bairroInput.value;
+        const cidade = cidadeInput.value;
+        const estado = cidadeInput.value;
+        const email = emailInput.value;
+
+        const senha = senhaInput.value;
+        const senha2 = confirmarSenhaInput.value;
+        if (senha !== senha2) {
+          return;
+        }
+
+        axios
+          .post("http://localhost:8081", {
+            nomeCompleto: nome,
+            dataNascimento: data,
+            CEP: cep,
+            rua: rua,
+            numero: numero,
+            bairro: bairro,
+            cidade: cidade,
+            estado: estado,
+            email: email,
+            senha: senha,
+          })
+          .then(function (res) {
+            console.log(res);
+            window.location.href = "/index/index.html";
+          })
+          .catch(function (err) {
+            console.log(err);
+          });
+      }
+    </script>
   </body>
 </html>

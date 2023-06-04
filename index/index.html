@@ -9,7 +9,7 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <style>
       * {
         margin: 0 !important;
@@ -66,19 +66,24 @@
                 <span>Lembre-se</span>
               </label>
             </div>
-            <a href="/redefinir senha/novaSenha.html" class="checkbox2">Esqueceu a senha?</a>
+            <a href="/redefinir senha/novaSenha.html" class="checkbox2"
+              >Esqueceu a senha?</a
+            >
           </div>
 
-          <a href="/tela principal/tela.html">
-            <input
-              type="submit"
-              name="submit"
-              id="submit"
-              value="Entrar"
-              class="bg-light border border-1 border-secondary rounded w-100 d-flex align-items-center justify-content-center"
-              style="height: 44px"
-            />
-          </a>
+          <div class="d-flex align-items-center justify-content-between mb-4">
+            <div>
+              <input
+                type="submit"
+                name="submit"
+                id="submit-entrar"
+                value="Entrar"
+                class="bg-light border border-1 border-secondary rounded w-100 d-flex align-items-center justify-content-center"
+                style="height: 44px"
+                onclick="login()"
+              />
+            </div>
+          </div>
 
           <div class="my-3 d-flex flex-column gap-2">
             <a>
@@ -127,5 +132,30 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      const emailInput = document.querySelector("#email");
+      const senhaInput = document.querySelector("#password");
+
+      function login() {
+        const email = emailInput.value;
+        const senha = senhaInput.value;
+
+        axios
+          .post("http://localhost:8081/login", {
+            email: email,
+            senha: senha,
+          })
+          .then(function (res) {
+            console.log(res.data);
+            if (res.data !== null) {
+              window.location.href = "/tela principal/tela.html";
+            }
+          })
+          .catch(function (err) {
+            console.log(err);
+          });
+      }
+    </script>
   </body>
 </html>
