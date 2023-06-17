@@ -9,21 +9,19 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body class="bg-[#EEE9E9]">
-    <form class="max-w-[392px] mx-auto">
-      <h1 class="text-4xl text-center font-bold mb-[72px]">
-        Cadastro da Empresa
-      </h1>
-      <div class="gap-6 mb-6 md:grid-cols-2">
+    <form class="max-w-[392px] my-12 mx-auto">
+      <h1 class="text-4xl text-center font-bold mb-4">Cadastro da Empresa</h1>
+      <div class="flex flex-col gap-2">
         <div>
           <label
             for="nome"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+            class="block text-sm font-medium text-gray-900 dark:text-black"
             >Nome do Estabelecimento</label
           >
           <input
             type="text"
             id="nome"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-[30px]"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
             placeholder="Salão de beleza"
             required
           />
@@ -31,189 +29,194 @@
         <div>
           <label
             for="text"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+            class="block text-sm font-medium text-gray-900 dark:text-black"
             >Endereço</label
           >
           <input
             type="text"
             id="endereco"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-[30px]"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
             placeholder="Rua 10"
             required
           />
         </div>
 
-        <label
-          for="periodo"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
-          >Periodo de serviço</label
-        >
-        <select
-          id="periodo"
-          class="block w-full p-2 mb-6 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
-        >
-          <option selected>Escola uma opção</option>
-          <option value="manha">Manhã</option>
-          <option value="tarde">Tarde</option>
-          <option value="noite">Noite</option>
-          <option value="manha-tarde">Manhã e tarde</option>
-        </select>
-        <label
-          for="horario"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
-          >Horário de serviço</label
-        >
-        <select
-          id="horario"
-          class="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-        >
-          <option selected>Selecione os horarios</option>
-          <option value="US">8h as 12h</option>
-          <option value="CA">8h as 14h</option>
-          <option value="FR">8h as 16h</option>
-          <option value="DE">8h as 18h</option>
-        </select>
+        <div>
+          <label
+            for="periodo"
+            class="block text-sm font-medium text-gray-900 dark:text-black"
+            >Periodo de serviço</label
+          >
+          <select
+            id="periodo"
+            class="block w-full p-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+          >
+            <option selected>Escola uma opção</option>
+            <option value="manha">Manhã</option>
+            <option value="tarde">Tarde</option>
+            <option value="noite">Noite</option>
+            <option value="manha-tarde">Manhã e tarde</option>
+          </select>
+        </div>
 
-        <h3 class="mb-5 text-lg font-medium text-gray-900 dark:text-blaack">
-          Tipo de serviço
-        </h3>
-        <ul class="grid w-full gap-6 md:grid-cols-2">
-          <li>
-            <input
-              type="radio"
-              id="estabelecimento"
-              name="hosting"
-              value="hosting-small"
-              class="hidden peer"
-              required
-            />
-            <label
-              for="estabelecimento"
-              class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-white-800 dark:hover:bg-gray-700"
-            >
-              <div class="block">
-                <div class="w-full text-lg font-semibold dark:text-black">
-                  Estabelecimento
+        <div>
+          <label
+            for="horario"
+            class="block text-sm font-medium text-gray-900 dark:text-black"
+            >Horário de serviço</label
+          >
+          <select
+            id="horario"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          >
+            <option selected>Selecione os horarios</option>
+            <option value="US">8h as 12h</option>
+            <option value="CA">8h as 14h</option>
+            <option value="FR">8h as 16h</option>
+            <option value="DE">8h as 18h</option>
+          </select>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-medium text-gray-900 dark:text-blaack">
+            Tipo de serviço
+          </h3>
+          <ul class="grid w-full gap-4 md:grid-cols-2">
+            <li>
+              <input
+                type="radio"
+                id="estabelecimento"
+                name="hosting"
+                value="hosting-small"
+                class="hidden peer"
+                required
+              />
+              <label
+                for="estabelecimento"
+                class="flex items-center justify-center w-full p-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-white-800 dark:hover:bg-gray-700"
+              >
+                <div class="block">
+                  <div class="font-semibold dark:text-black">
+                    Estabelecimento
+                  </div>
                 </div>
-              </div>
-            </label>
-          </li>
-          <li>
-            <input
-              type="radio"
-              id="autonomo"
-              name="hosting"
-              value="hosting-big"
-              class="hidden peer"
-            />
-            <label
-              for="autonomo"
-              class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-white-800 dark:hover:bg-gray-700"
-            >
-              <div class="block">
-                <div class="w-full text-lg font-semibold dark:text-black">
-                  Autônomo
+              </label>
+            </li>
+            <li>
+              <input
+                type="radio"
+                id="autonomo"
+                name="hosting"
+                value="hosting-big"
+                class="hidden peer"
+              />
+              <label
+                for="autonomo"
+                class="flex items-center justify-center w-full p-2 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-white-800 dark:hover:bg-gray-700"
+              >
+                <div class="block">
+                  <div class="font-semibold dark:text-black">Autônomo</div>
                 </div>
-              </div>
-            </label>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <label
-          for="numero"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
-          >Número para contato</label
-        >
-        <input
-          type="text"
-          id="numero"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-[30px]"
-          placeholder="(00) 00000-0000"
-          required
-        />
-      </div>
-      <div>
-        <label
-          for="email"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
-          >Email</label
-        >
-        <input
-          type="email"
-          id="email"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-[30px]"
-          placeholder="john.doe@company.com"
-          required
-        />
-      </div>
-      <div>
-        <label
-          for="senha"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
-          >Senha</label
-        >
-        <input
-          type="password"
-          id="senha"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-[30px]"
-          placeholder="•••••••••"
-          required
-        />
-      </div>
-      <div>
-        <label
-          for="confirmarSenha"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
-          >Confirmar senha</label
-        >
-        <input
-          type="password"
-          id="confirmarSenha"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mb-[30px]"
-          placeholder="•••••••••"
-          required
-        />
-      </div>
-      <div class="flex items-start mb-6">
-        <div class="flex items-center h-5">
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <label
+            for="numero"
+            class="block text-sm font-medium text-gray-900 dark:text-black"
+            >Número para contato</label
+          >
           <input
-            id="remember"
-            type="checkbox"
-            value=""
-            class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300"
+            type="text"
+            id="numero"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="(00) 00000-0000"
             required
           />
         </div>
-        <label
-          for="remember"
-          class="ml-2 text-sm font-medium text-gray-900 dark:text-black-300"
-          >Eu confirmo com os termos de confições.</label
+        <div>
+          <label
+            for="email"
+            class="block text-sm font-medium text-gray-900 dark:text-black"
+            >Email</label
+          >
+          <input
+            type="email"
+            id="email"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="john.doe@company.com"
+            required
+          />
+        </div>
+        <div>
+          <label
+            for="senha"
+            class="block text-sm font-medium text-gray-900 dark:text-black"
+            >Senha</label
+          >
+          <input
+            type="password"
+            id="senha"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="•••••••••"
+            required
+          />
+        </div>
+        <div>
+          <label
+            for="confirmarSenha"
+            class="block text-sm font-medium text-gray-900 dark:text-black"
+            >Confirmar senha</label
+          >
+          <input
+            type="password"
+            id="confirmarSenha"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="•••••••••"
+            required
+          />
+        </div>
+        <div class="flex items-start">
+          <div class="flex items-center h-5">
+            <input
+              id="remember"
+              type="checkbox"
+              value=""
+              class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300"
+              required
+            />
+          </div>
+          <label
+            for="remember"
+            class="ml-2 text-sm font-medium text-gray-900 dark:text-black-300"
+            >Eu confirmo com os termos de confições.</label
+          >
+        </div>
+        <button
+          type="button"
+          class="w-full relative inline-flex items-center justify-center p-0.5 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800"
+          onclick="enviarForms()"
         >
+          <span
+            class="w-full relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
+          >
+            Cadastrar
+          </span>
+        </button>
       </div>
-      <button
-        type="button"
-        class="w-full relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800"
-        onclick="enviarForms()"
-      >
-        <span
-          class="w-full relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
-        >
-          Cadastrar
-        </span>
-      </button>
     </form>
     <script>
-      const nomeInput = document.querySelector("#nome");
-      const enderecoInput = document.querySelector("#endereco");
-      const periodoInput = document.querySelector("#periodo");
-      const horarioInput = document.querySelector("#horario");
-      const tipoServico01Input = document.querySelector("#estabelecimento");
-      const tipoServico02Input = document.querySelector("#autonomo");
-      const numeroInput = document.querySelector("#numero");
-      const emailInput = document.querySelector("#email");
-      const senhaInput = document.querySelector("#senha");
-      const confirmarSenhaInput = document.querySelector("#confirmarSenha");
+      const nomeInput = document.querySelector('#nome');
+      const enderecoInput = document.querySelector('#endereco');
+      const periodoInput = document.querySelector('#periodo');
+      const horarioInput = document.querySelector('#horario');
+      const tipoServico01Input = document.querySelector('#estabelecimento');
+      const tipoServico02Input = document.querySelector('#autonomo');
+      const numeroInput = document.querySelector('#numero');
+      const emailInput = document.querySelector('#email');
+      const senhaInput = document.querySelector('#senha');
+      const confirmarSenhaInput = document.querySelector('#confirmarSenha');
 
       function enviarForms() {
         const nome = nomeInput.value;
@@ -232,7 +235,7 @@
         }
 
         axios
-          .post("http://localhost:8081/empresa", {
+          .post('http://localhost:8081/empresa', {
             nomeEmpresa: nome,
             endereco: endereco,
             periodo: periodo,
@@ -244,7 +247,7 @@
           })
           .then(function (res) {
             console.log(res);
-            window.location.href = "/index/index.html";
+            window.location.href = '/index/index.html';
           })
           .catch(function (err) {
             console.log(err);
@@ -253,3 +256,4 @@
     </script>
   </body>
 </html>
+<!--ok-->
