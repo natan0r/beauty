@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exluir Conta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body class="bg-[#EEE9E9]">
+    <div>
+      <h1 class="text-center font-mono font-bold text-[45px] mt-[45px]">
+        Excluir Conta
+      </h1>
+      <form class="max-w-[392px] my-12 mx-auto">
+        <div class="flex flex-col gap-2">
+          <label
+            for="email01"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+            >E-mail</label
+          >
+          <input
+            type="email"
+            id="email01"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="youremail@email.com"
+            required
+          />
+        </div>
+        <div class="flex flex-col gap-2 mt-[25px]">
+          <label
+            for="email02"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+            >Confirmar e-mail</label
+          >
+          <input
+            type="email"
+            id="email02"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="youremail@email.com"
+            required
+          />
+        </div>
+        <div class="flex flex-col gap-2 mt-[25px]">
+          <label
+            for="senha01"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+            >Senha</label
+          >
+          <input
+            type="password"
+            id="senha01"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="•••••••••"
+            required
+          />
+        </div>
+        <div class="flex flex-col gap-2 mt-[25px]">
+          <label
+            for="senha02"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+            >Confirmar senha</label
+          >
+          <input
+            type="password"
+            id="senha02"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="•••••••••"
+            required
+          />
+        </div>
+        <div class="mt-[60px]">
+          <button
+            type="button"
+            class="w-full relative inline-flex items-center justify-center p-0.5 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800"
+            onclick="exlcuir()"
+          >
+            <span
+              class="w-full relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
+            >
+              Excluir conta
+            </span>
+          </button>
+        </div>
+      </form>
+    </div>
+    <script>
+      const emailInput = document.querySelector("#email01");
+      const confirmarEmailInput = document.querySelector("#email02");
+      const senhaInput = document.querySelector("#senha01");
+      const confirmarSenhaInput = document.querySelector("#senha02");
+
+      function exlcuir() {
+        const email = emailInput.value;
+        const confirmarEmail = confirmarEmailInput.value;
+        const senha = senhaInput.value;
+        const confirmarSenha = confirmarSenhaInput.value;
+
+        if (email !== confirmarEmail) {
+          return;
+        }
+        if (senha !== confirmarSenha) {
+          return;
+        }
+
+        axios
+          .delete("http://localhost:8081/cliente", {
+            data: {
+              email: email,
+              senha: senha,
+            },
+          })
+          .then(function (res) {
+            console.log(res);
+            window.location.href = "/index/index.html";
+          })
+          .catch(function (err) {
+            console.log(err);
+          });
+
+        axios
+          .delete("http://localhost:8081/empresa", {
+            data: {
+              email: email,
+              senha: senha,
+            },
+          })
+          .then(function (res) {
+            console.log(res);
+            window.location.href = "/index/index.html";
+          })
+          .catch(function (err) {
+            console.log(err);
+          });
+      }
+    </script>
+  </body>
+</html>
