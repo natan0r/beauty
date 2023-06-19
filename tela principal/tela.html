@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Beauty</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <nav class="py-8 px-4">
@@ -66,200 +67,105 @@
       </div>
 
       <!-- container principal -->
-      <div class="w-full flex justify-center gap-6 flex-wrap">
-        <div
-          class="w-1/4 bg-white border-lg gap-6 p-6 flex flex-col items-center rounded-md"
-        >
-          <img src="../img/card.png" alt="" class="w-full" />
-          <div class="w-full flex flex-col">
-            <div class="w-full flex justify-between">
-              <h1>Nome do estabelecimento</h1>
-              <div class="flex">
-                <div>icon1</div>
-                <div>icon2</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="w-full flex">
-            <div>Avaliação</div>
-            <div>Distância</div>
-          </div>
-
-          <div class="w-full">Dono do estabelecimento</div>
-
-          <div class="w-full flex justify-between items-center">
-            <div>Descrição</div>
-            <a href="/salao01/salao01.html"
-              ><button
-                class="px-10 py-2 bg-violet-600 text-white font-semibold rounded-lg"
-              >
-                Reservar
-              </button></a
-            >
-          </div>
-        </div>
-        <div
-          class="w-1/4 bg-white border-lg gap-4 p-6 flex flex-col items-center"
-        >
-          <img src="../img/image 5.png" alt="" class="w-full" />
-          <div class="w-full flex flex-col">
-            <div class="w-full flex justify-between">
-              <h1>Nome</h1>
-              <div class="flex">
-                <div>icon1</div>
-                <div>icon2</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="w-full flex">
-            <div>Avaliação</div>
-            <div>Distância</div>
-          </div>
-
-          <div class="w-full">Dono do estabelecimento</div>
-
-          <div class="w-full flex justify-between items-center">
-            <div>Descrição</div>
-            <a href="/salao01/salao01.html"
-              ><button
-                class="px-10 py-2 bg-violet-600 text-white font-semibold rounded-lg"
-              >
-                Reservar
-              </button></a
-            >
-          </div>
-        </div>
-        <div
-          class="w-1/4 bg-white border-lg gap-4 p-6 flex flex-col items-center"
-        >
-          <img src="../img/Rectangle 8.png" alt="" class="w-full" />
-          <div class="w-full flex flex-col">
-            <div class="w-full flex justify-between">
-              <h1>Nome</h1>
-              <div class="flex">
-                <div>icon1</div>
-                <div>icon2</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="w-full flex">
-            <div>Avaliação</div>
-            <div>Distância</div>
-          </div>
-
-          <div class="w-full">Dono do estabelecimento</div>
-
-          <div class="w-full flex justify-between items-center">
-            <div>Descrição</div>
-            <a href="/salao01/salao01.html"
-              ><button
-                class="px-10 py-2 bg-violet-600 text-white font-semibold rounded-lg"
-              >
-                Reservar
-              </button></a
-            >
-          </div>
-        </div>
-        <div
-          class="w-1/4 bg-white border-lg gap-4 p-6 flex flex-col items-center"
-        >
-          <img src="../img/Rectangle 5.png" alt="" class="w-full" />
-          <div class="w-full flex flex-col">
-            <div class="w-full flex justify-between">
-              <h1>Nome</h1>
-              <div class="flex">
-                <div>icon1</div>
-                <div>icon2</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="w-full flex">
-            <div>Avaliação</div>
-            <div>Distância</div>
-          </div>
-
-          <div class="w-full">Dono do estabelecimento</div>
-
-          <div class="w-full flex justify-between items-center">
-            <div>Descrição</div>
-            <a href="/salao01/salao01.html"
-              ><button
-                class="px-10 py-2 bg-violet-600 text-white font-semibold rounded-lg"
-              >
-                Reservar
-              </button></a
-            >
-          </div>
-        </div>
-        <div
-          class="w-1/4 bg-white border-lg gap-4 p-6 flex flex-col items-center"
-        >
-          <img src="../img/Rectangle 7.png" alt="" class="w-full" />
-          <div class="w-full flex flex-col">
-            <div class="w-full flex justify-between">
-              <h1>Nome</h1>
-              <div class="flex">
-                <div>icon1</div>
-                <div>icon2</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="w-full flex">
-            <div>Avaliação</div>
-            <div>Distância</div>
-          </div>
-
-          <div class="w-full">Dono do estabelecimento</div>
-
-          <div class="w-full flex justify-between items-center">
-            <div>Descrição</div>
-            <a href="/salao01/salao01.html"
-              ><button
-                class="px-10 py-2 bg-violet-600 text-white font-semibold rounded-lg"
-              >
-                Reservar
-              </button></a
-            >
-          </div>
-        </div>
-        <div
-          class="w-1/4 bg-white border-lg gap-4 p-6 flex flex-col items-center"
-        >
-          <img src="../img/Rectangle 9.png" alt="" class="w-full" />
-          <div class="w-full flex flex-col">
-            <div class="w-full flex justify-between">
-              <h1>Nome</h1>
-              <div class="flex">
-                <div>icon1</div>
-                <div>icon2</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="w-full flex">
-            <div>Avaliação</div>
-            <div>Distância</div>
-          </div>
-
-          <div class="w-full">Dono do estabelecimento</div>
-
-          <div class="w-full flex justify-between items-center">
-            <div>Descrição</div>
-            <a href="/salao01/salao01.html"
-              ><button
-                class="px-10 py-2 bg-violet-600 text-white font-semibold rounded-lg"
-              >
-                Reservar
-              </button></a
-            >
-          </div>
-        </div>
-      </div>
+      <div
+        id="container"
+        class="w-full flex justify-center gap-6 flex-wrap"
+      ></div>
     </main>
+    <script>
+      function gerarEstabelicimentos() {
+        axios
+          .get("http://localhost:8081/empresa")
+          .then(function (res) {
+            console.log(res.data);
+            const estabelecimentos = res.data;
+            for (const estabelecimento of estabelecimentos) {
+              const cartao = document.createElement("div");
+              cartao.classList.add(
+                "w-1/4",
+                "bg-white",
+                "border-lg",
+                "gap-4",
+                "p-6",
+                "flex",
+                "flex-col",
+                "items-center"
+              );
+
+              const imagem = document.createElement("img");
+              imagem.src = "../img/Rectangle 9.png";
+              imagem.classList.add("w-full");
+
+              const cartaoDiv = document.createElement("div");
+              cartaoDiv.classList.add("w-full", "flex", "flex-col");
+
+              const cartaoDiv2 = document.createElement("div");
+              cartaoDiv2.classList.add("w-full", "flex", "justify-between");
+
+              const h1Nome = document.createElement("h1");
+              h1Nome.innerHTML = estabelecimento.nomeEmpresa;
+
+              cartaoDiv.appendChild(cartaoDiv2);
+              cartaoDiv2.appendChild(h1Nome);
+
+              const classeAvlDis = document.createElement("div");
+              classeAvlDis.classList.add("w-full", "flex");
+
+              const avaliacao = document.createElement("div");
+              avaliacao.innerHTML = "avaliação";
+
+              const distancia = document.createElement("div");
+              distancia.innerHTML = "distancia";
+
+              classeAvlDis.appendChild(avaliacao);
+              classeAvlDis.appendChild(distancia);
+
+              const donoEstab = document.createElement("div");
+              donoEstab.classList.add("w-full");
+              donoEstab.innerHTML = estabelecimento.dono;
+
+              const descricaoLocal = document.createElement("div");
+              descricaoLocal.classList.add(
+                "w-full",
+                "flex",
+                "justify-between",
+                "items-center"
+              );
+
+              const descricao = document.createElement("div");
+              descricao.innerHTML = estabelecimento.descricao;
+
+              const link = document.createElement("a");
+
+              link.href = "../reserva/reserva.html";
+
+              link.classList.add(
+                "px-10",
+                "py-2",
+                "bg-violet-600",
+                "text-white",
+                "font-semibold",
+                "rounded-lg"
+              );
+              link.innerHTML = "reservar";
+
+              descricaoLocal.appendChild(descricao);
+              descricaoLocal.appendChild(link);
+
+              cartao.appendChild(imagem);
+              cartao.appendChild(cartaoDiv);
+              cartao.appendChild(classeAvlDis);
+              cartao.appendChild(donoEstab);
+              cartao.appendChild(descricaoLocal);
+
+              container.appendChild(cartao);
+            }
+          })
+          .catch(function (err) {
+            console.log(err);
+          });
+      }
+      gerarEstabelicimentos();
+    </script>
   </body>
 </html>
